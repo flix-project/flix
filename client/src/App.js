@@ -5,12 +5,12 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import tokenAuth from "./config/token";
 import AuthState from "./context/auth/AuthState";
-import Login from "./componentes/Login";
+import Login from "./component/Login";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
-import SignUp from "./componentes/SignUp";
-import LayoutHome from "./componentes/LayoutHome";
-import PrivateRoute from "./componentes/routes/PrivateRoute";
-import LayoutSaved from "./componentes/LayoutSaved";
+import SignUp from "./component/SignUp";
+import LayoutHome from "./component/LayoutHome";
+import PrivateRoute from "./component/routes/PrivateRoute";
+import LayoutSaved from "./component/LayoutSaved";
 const theme = createMuiTheme({
   palette: {
     primary: {
