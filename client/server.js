@@ -1,4 +1,3 @@
-//code for this file from https://medium.com/better-programming/how-to-deploy-your-react-app-to-heroku-aedc28b218ae//
 const path = require('path');
 const express = require('express');
 const app = express();
