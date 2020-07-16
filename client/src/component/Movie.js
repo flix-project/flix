@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
   media: {
     height: 0,
-    paddingTop: "120.25%", // 16:9
+    paddingTop: "120.25%", 
   },
   expand: {
     transform: "rotate(0deg)",
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     backgroundColor: deepOrange[500],
-    ['@media (max-width:780px)']: { // eslint-disable-line no-useless-computed-key
+    ['@media (max-width:780px)']: { 
       display: 'none'
     }
   },
