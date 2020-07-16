@@ -29,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
     height: 70,
     borderRadius: 25,
   },
- 
    
 }));
 
