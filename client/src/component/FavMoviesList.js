@@ -10,7 +10,7 @@ const FavMoviesList = () => {
   if (userMovies.length > 0 && !spinnerFav) {
     return (
       <>
-        <h1> Saved movies </h1>
+        <h1> Saved </h1>
         <Grid container spacing={3}>
           {userMovies.map((movie) => (
             <Movie movie={movie} key={movie.imdbID} />
@@ -24,7 +24,7 @@ const FavMoviesList = () => {
     {spinnerFav ? (
       <CircularProgress color="secondary" />
     ) : (
-      <h1> You haven't saved movies yet</h1>
+      <h1> You haven't saved yet</h1>
     )}
   </>
   )
