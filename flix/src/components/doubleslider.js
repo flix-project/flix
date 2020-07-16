@@ -1,5 +1,7 @@
 import React from 'react';
-    {
+
+function Doubleslider () {
+    
         {(isSignIn, isSignUp, handleSignIn, handleSignUp) => (
             <React.Fragment>
                 <DoubleSliderSign.SignIn>
@@ -18,7 +20,7 @@ import React from 'react';
                 </DoubleSliderSign.Overlay>
                 </React.Fragment>
             
-        )
+        );
     }}
     
-export default DoubleSliderSign;
+export default Doubleslider;
