@@ -47,10 +47,8 @@ const SignUp = (props) => {
     if (autenticated && !spinner) {
       props.history.push("/home");
     }
-    // eslint-disable-next-line
   }, [message, autenticated, props.history]);
 
-  // state to sign up
   const [user, saveUser] = useState({
     name: "",
     email: "",
@@ -59,7 +57,6 @@ const SignUp = (props) => {
     error: ""
   });
 
-  // extract from user
   const { name, email, password, confirm, error } = user;
 
   const onChange = (e) => {
@@ -69,7 +66,6 @@ const SignUp = (props) => {
     });
   };
 
-  // when login
   const onSubmit = (e) => {
     e.preventDefault();
     if(password !== confirm){
@@ -79,7 +75,6 @@ const SignUp = (props) => {
         })
         return;
     }
-    // to action
     createUser({ name, email, password });
   };
 
