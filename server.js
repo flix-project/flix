@@ -16,7 +16,14 @@ app.use('/api/users', require('./routes/users'));
 app.use('/api/auth', require('./routes/auth'));
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/flix");
+mongoose.connect("mongodb://localhost/flix", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+
+mongoose.connection.on("connected", () => {
+  console.log("mongodb is connected!!!");
+})
 
 
 // Start the API server
