@@ -11,7 +11,6 @@ exports.createUser = async (req, res) => {
         return res.status(400).json({errors: errors.array() })
     }
 
-    // extraer email y password
     const { email, password } = req.body;
 
 
@@ -26,7 +25,7 @@ exports.createUser = async (req, res) => {
         // create user
         user = new User(req.body);
 
-        // Hash password
+        //  password
         const salt = await bcryptjs.genSalt(10);
         user.password = await bcryptjs.hash(password, salt );
 
@@ -40,9 +39,9 @@ exports.createUser = async (req, res) => {
             }
         };
 
-        // sign el JWT
+        // sign JWT
         jwt.sign(payload, process.env.SECRET, {
-            expiresIn: 3600 // 1 hora
+            expiresIn: 3600 
         }, (error, token) => {
             if(error) throw error;
 
