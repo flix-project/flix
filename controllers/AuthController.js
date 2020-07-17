@@ -9,8 +9,6 @@ exports.autenticateUser = async (req, res) => {
     if( !errors.isEmpty() ) {
         return res.status(400).json({errors: errors.array() })
     }
-
-    // extract email and password
     const { email, password } = req.body;
 
     try {
@@ -35,7 +33,7 @@ exports.autenticateUser = async (req, res) => {
 
         //  sign JWT
         jwt.sign(payload, process.env.SECRET, {
-            expiresIn: 3600 // 1 hora
+            expiresIn: 3600 // 
         }, (error, token) => {
             if(error) throw error;
 
