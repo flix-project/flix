@@ -3,7 +3,7 @@ import {
   AppBar,
   IconButton,
   Toolbar,
-  Button,no,
+  Button,
   Typography,
   makeStyles,
 } from "@material-ui/core";
@@ -29,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
     height: 70,
     borderRadius: 25,
   },
- 
    
 }));
 

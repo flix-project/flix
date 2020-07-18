@@ -24,7 +24,6 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-<<<<<<< HEAD
   "browserslist": {
     "production": [
       ">0.2%",
@@ -36,13 +35,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-=======
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "express": "^4.17.1",
-    "express-validator": "^6.6.0",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.24"
->>>>>>> parent of 5e6c68b... Merge pull request #13 from flix-project/bikram
   }
 }

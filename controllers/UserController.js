@@ -11,6 +11,7 @@ exports.createUser = async (req, res) => {
         return res.status(400).json({errors: errors.array() })
     }
 
+    // extraer email y password
     const { email, password } = req.body;
 
 
@@ -39,9 +40,9 @@ exports.createUser = async (req, res) => {
             }
         };
 
-        // sign JWT
+        // sign el JWT
         jwt.sign(payload, process.env.SECRET, {
-            expiresIn: 3600 
+            expiresIn: 3600 // 1 hora
         }, (error, token) => {
             if(error) throw error;
 

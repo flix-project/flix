@@ -1,28 +1,25 @@
 const express = require('express');
-const connectDB = require('./scripts/db');
-const cors = require('cors');
 
-// Create Express Server 
+const mongoose = require("mongoose");
 const app = express();
 
-// Connect to db
-connectDB();
 
-// Activate cors
-app.use(cors());
-
-// Activate express.json
-app.use( express.json({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // App port
-var PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
+
 
 // Import routes
 app.use('/api/users', require('./routes/users'));
 app.use('/api/auth', require('./routes/auth'));
 
-// Start app
+// Connect to the Mongo DB
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/flix");
+
+
+// Start the API server
 app.listen(PORT, function() {
-    console.log(`Now listening on port: ${PORT}`);
+    console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
   });
-  

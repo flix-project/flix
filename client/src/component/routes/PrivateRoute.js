@@ -8,7 +8,7 @@ const PrivateRoute= ({ component: Component, ...props  }) => {
     const { autenticated, spinner, autenticatedUser } = authContext;
     useEffect(() => {
         autenticatedUser();
-        // eslint-disable-next-line
+        
     }, []);
     return ( 
         <Route { ...props } render={ props => !autenticated && !spinner ?  (

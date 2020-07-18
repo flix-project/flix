@@ -13,11 +13,11 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(2),
       width: "25ch"
     },
-    ['@media (max-width:780px)']: { // eslint-disable-line no-useless-computed-key
+    ['@media (max-width:780px)']: { 
       flexDirection: "column"
     }
   ,
-    margin: "5rem",
+    margin: "10rem",
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
@@ -33,7 +33,7 @@ const Formulario = () => {
 
   const { searchMovies, saveSearch } = useContext(MoviesContext);
 
-  // función para leer los contenidos
+
   const getMovies = (e) => {
     setSearch({
       ...search,
