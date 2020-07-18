@@ -45,7 +45,7 @@ const MainHeader = () => {
           {<img src="/logo.png" className={classes.image} alt="logo"/>}
         </IconButton>
         <Typography variant="h6" className={classes.title}>
-          Movies and TV WHEN YOU WANT
+          Movies and TV shows
         </Typography>
 
           <Button color="inherit" href="/signup">

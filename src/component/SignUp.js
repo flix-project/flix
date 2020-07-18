@@ -156,7 +156,7 @@ const SignUp = (props) => {
           <Grid container>
             <Grid item>
               <Link href="/" variant="body2">
-                {"Already with Flix? Sign in!"}
+                {"Do you already have an account? Sign In"}
               </Link>
             </Grid>
           </Grid>

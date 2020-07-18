@@ -126,7 +126,7 @@ const classes= useStyles();
             </Grid> */}
             <Grid item>
               <Link href="/signup" variant="body2">
-                New to Flix? Sign up now!
+                Don't have an account? Sign Up
               </Link>
             </Grid>
           </Grid>
