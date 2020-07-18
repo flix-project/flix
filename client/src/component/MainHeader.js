@@ -1,14 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import {
   AppBar,
   IconButton,
   Toolbar,
-  Button,no,
+  Button,
   Typography,
   makeStyles,
 } from "@material-ui/core";
-import AuthContext from "../context/auth/AuthContext";
-import FavoriteIcon from '@material-ui/icons/Favorite';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,10 +17,8 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
-    fontSize: "2.2rem",
-    ['@media (max-width:780px)']: { 
-      display: 'none'
-    }
+    textAlign: "center",
+    fontSize: "2.2rem"
   },
   image: {
     width: 95,
@@ -30,14 +26,11 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 25,
   },
  
-   
 }));
 
-const Header = () => {
+const MainHeader = () => {
   const classes = useStyles();
 
-  const authContext = useContext(AuthContext);
-  const { logout } = authContext;
 
   return (
     <AppBar position="static">
@@ -47,23 +40,21 @@ const Header = () => {
           className={classes.menuButton}
           color="inherit"
           aria-label="menu"
-          href="/home"
+          href="/"
         >
           {<img src="/logo.png" className={classes.image} alt="logo"/>}
         </IconButton>
-        
         <Typography variant="h6" className={classes.title}>
           Movies and TV shows
         </Typography>
-        <IconButton aria-label="favorites" href="/saved">
-        <FavoriteIcon color="secondary" />
-        </IconButton>
-          <Button color="inherit" onClick={ () => logout()}>
-            LOG OUT
+
+          <Button color="inherit" href="/signup">
+            SIGN UP
           </Button>
+  
       </Toolbar>
     </AppBar>
   );
 };
 
-export default Header;
+export default MainHeader;
