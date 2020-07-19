@@ -82,6 +82,7 @@ const AuthState = (props) => {
       // get user
       autenticatedUser();
     } catch (error) {
+      console.log(error);
       const alert = {
         msg: error.response.data.msg,
         cat: "alert",

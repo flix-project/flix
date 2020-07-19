@@ -13,17 +13,17 @@ app.use(express.json());
 
 
 // App port
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/flix");
+ // Connect to the Mongo DB 
 
+app.get("*", function(req, res) {
+ res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 // Import routes
 app.use('/api/users', require('./routes/users'));
 app.use('/api/auth', require('./routes/auth'));
-//app.get("*", function(req, res) {
-//  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-//});
-// Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/flix");
 
 
 // Start the API server
