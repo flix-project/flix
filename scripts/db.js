@@ -1,19 +1,7 @@
 const mongoose = require('mongoose');
-require('dotenv').config({ path: 'variables.env' });
+const db = require("../models");
 
-const connectDB = async () => {
-    try {
-        await mongoose.connect(process.env.DB_MONGO, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            useFindAndModify: false
-        });
-        console.log('DB Connected');
-    } catch (error) {
-        console.log('Error connecting to db')
-        console.log(error);
-        process.exit(1); 
-    }
-}
-
-module.exports = connectDB;
+mongoose.connect(
+    process.env.MONGODB_URI ||
+    "mongodb://localhost/flix"
+  );
