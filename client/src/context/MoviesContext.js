@@ -62,7 +62,7 @@ const MoviesProvider = (props) => {
         setSpinner(true);
 
         if (type === "All") {
-          url = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_OTMDB}&s=${title}`;
+          url = `https://www.omdbapi.com/?apikey=${process.env.OTMDBkey}&s=${title}`;
         } else {
           url = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_OTMDB}&s=${title}&type=${type}`;
         }
