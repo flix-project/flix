@@ -13,7 +13,7 @@ app.use(express.json());
 
 
 // App port
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/flix");
  // Connect to the Mongo DB 
