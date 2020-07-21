@@ -4,7 +4,6 @@ const { validationResult } = require('express-validator');
 const jwt = require('jsonwebtoken');
 
 exports.autenticateUser = async (req, res) => {
-    // check if there is an error
     const errors = validationResult(req);
     if( !errors.isEmpty() ) {
         return res.status(400).json({errors: errors.array() })
@@ -12,7 +11,6 @@ exports.autenticateUser = async (req, res) => {
     const { email, password } = req.body;
 
     try {
-        // check if an user is registered
         let user = await User.findOne({ email });
         if(!user) {
             return res.status(400).json({msg: 'This user does not exists'});
