@@ -4,17 +4,13 @@ const { validationResult } = require('express-validator');
 const jwt = require('jsonwebtoken');
 
 exports.autenticateUser = async (req, res) => {
-    // check if there is an error
     const errors = validationResult(req);
     if( !errors.isEmpty() ) {
         return res.status(400).json({errors: errors.array() })
     }
-
-    // extract email and password
     const { email, password } = req.body;
 
     try {
-        // check if an user is registered
         let user = await User.findOne({ email });
         if(!user) {
             return res.status(400).json({msg: 'This user does not exists'});
@@ -35,7 +31,7 @@ exports.autenticateUser = async (req, res) => {
 
         //  sign JWT
         jwt.sign(payload, process.env.SECRET, {
-            expiresIn: 3600 // 1 hora
+            expiresIn: 3600 // 
         }, (error, token) => {
             if(error) throw error;
 
