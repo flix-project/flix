@@ -12,7 +12,6 @@ Our application allows users to find available streaming services for any movie 
 * [Credits](#credits)
 * [License](#license)
 
-
 ## Installation
 
 If you'd like use the app just visit the deployed page [here](https://movie-tracker-user.herokuapp.com/)  
