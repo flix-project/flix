@@ -19,10 +19,7 @@ If you'd like use the app just visit the deployed page [here](https://movie-trac
 ## Usage
 
 Please see FLIX in action  
-![FLIX gif showing how it works]
-(./images/ScreenShot1.png)
-(./images/search.png)
-(./images/favorites.png)
+![FLIX png showing how it works](./images/ScreenShot1.png)(./images/search.png)(./images/favorites.png)
 
 ## Future Development
 * Launch video from app
