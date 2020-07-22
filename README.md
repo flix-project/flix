@@ -18,8 +18,8 @@ If you'd like use the app just visit the deployed page [here](https://movie-trac
 
 ## Usage
 
-Please see Home Body in action  
-![Homebody gif showing how it works](./public/assets/images/HomeBody.gif)
+Please see FLIX in action  
+![FLIX gif showing how it works](./images/ScreenShot1.png)
 
 ## Future Development
 * Launch video from app
