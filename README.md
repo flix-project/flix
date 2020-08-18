@@ -9,6 +9,7 @@ Our application allows users to find available streaming services for any movie 
 * [Installation](#installation)
 * [Usage](#usage)
 * [Future-Development](#future-development)
+  [Tech] (#tech)
 * [Credits](#credits)
 * [License](#license)
 
