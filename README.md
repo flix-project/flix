@@ -29,6 +29,12 @@ Please see FLIX in action
 * Recommendations feature
 * Integrate advertising
 
+## Tech
+* Material UI react framework
+* React and React Router for frontend
+* Express and Node for the backend
+* MongoDB for the database
+* Redux for state management between React components
 ## Credits
 
 * [Tressa Park](https://github.com/TressaPark), Northwestern University
